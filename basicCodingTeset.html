@@ -1,0 +1,147 @@
+Condition Report Technical Evaluation Quiz 
+
+1. Provide the HTML to include the /js/srcripts.js on a page: 
+
+	<script src=”/js/srcripts.js”></script>
+
+2. Given the following HTML, provide the JavaScript using the jQuery library to write “Hello, World!" to the console when the “Hello, World!" button is clicked: Hello, World! 
+
+	<button id="hello_world_button">Hello, World!</button>
+
+	<script>
+		$(“#hello_world_button”).click(function() {
+			console.log("Hello World");
+		});
+	</script>
+
+3. Given the following HTML, provide the CSS to make the background of the DIV element
+red:
+
+	<div class=”red-block”> My background should be red </div>
+
+	.red-block {
+		background-color: red;
+	}
+
+4. Provide the HTML to include the /css/styles.css on a page:
+
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+5. Given the following HTML, provide the CSS to add a non-repeating background image to
+the DIV element centered horizontally and aligned to the top. The location of the image is /images/bg.png.
+
+	<div class="block-with-bg" style="background: url("/images/bg.png") no-repeat top center">
+		Should have a background image, aligned to the top and centered
+		horizontally.
+	</div>
+
+6. Given the following table definition, provide the SQL to count the number of rows with group_id=2:
+	create table foo (
+	 	id int(11) not null primary key,
+	 	name varchar(255),
+	 	group_id int(11) not null);
+
+
+	SELECT COUNT (group_id) AS RowsWithGroupID2 FROM FOO
+	WHERE group_id=2; 
+
+
+7. Given the same table definition as above, provide the SQL to update the name to name column to “Joe" for the row with id=2:
+
+	ALTER TABLE foo RENAME COLUMN WHERE group_id=2 TO Joe;
+
+8. Given the following HTML, provide the PHP code used to assign the value of the
+“first_name" field to a variable named $firstName in the form.php script:
+
+	<form action="form.php" method="post">
+		<input type="text" name="first_name" />
+		<input type="text" name="last_name" />
+		<input type="password" name="password" />
+		<input type="submit" value="Register"/>
+	</form>
+	
+	<?php
+		$firstName = $_POST["first_name"];
+	?>
+
+9. What will be printed from the following PHP code:
+	<?php
+		if (null === false) {
+		 echo 'true';
+		} else {
+		 echo 'false';
+		}
+	?>
+
+	'false' will be printed
+
+10. What will be printed from the following PHP code:
+	<?php
+		class MyException extends Exception {
+		}
+
+		try {
+		 throw new MyException('Oops!');
+		} 
+
+		catch (Exception $e) {
+		 echo "Caught Exception\n";
+		} 
+		catch (MyException $e) {
+		 echo "Caught MyException\n";
+		}
+	?>
+
+	Caught Oops! with a new line after it will be printed.
+
+11.
+
+low
+high
+just high enough
+
+12.
+
+Apple
+Banana
+
+13.
+
+Fruit
+Fruit
+
+14. In an MVC architecture, in which layer would you find HTML?
+
+	In the View
+
+15. In an MVC architecture, in which layer would you find SQL?
+
+	In the Model
+
+16. What is the difference between MVC and MVVM?
+
+	My knowledge of MVVM comes from Angular where inputs on the frontend have a two way data binding with the model, and everything is updated asynchronysly.  In MVC changes go from the view, are filtered through the controller, and are then saved to the model, then the model is loaded to the view in the reverse process.
+
+17. Provide the Git command or commands to clone the repository at
+https://username@bitbucket.org/fooproject/foo.com.git to a local working directory named fooproject:
+
+git clone https://username@bitbucket.org/fooproject/foo.com.git fooproject
+
+18. Provide the Git command or commands to commit your changes to your development branch named dev_foo and push those changes to origin:
+
+git add -A
+git commit -m "add dev_foo"
+git push origin dev_foo
+
+19. You are using a Git branch named dev_foo. Provide the Git command or commands to
+commit your changes to your branch.
+
+git commit -am "commit to dev_foo"
+
+20. All your changes are committed to your local repository on your development branch, dev_foo. You need to merge changes committed and pushed to the master branch on origin to get the latest code from the rest of the team. Provide the Git command or commands to pull down and merge the changes from master to your dev_foo branch:
+
+git pull origin master
+// ~there are conflicts, please merge conflicts~
+// ~Merge the conflicts~
+git commit -am "merge"
+git push origin master
